@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Make My Choice! | Photo | お昼寝タイム</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Google Web Fonts CSS -->
+	<link href="http://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+
+	<!-- Original CSS -->
+	<link href="css/styles.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<header id="header" class="navbar navbar-inverse navbar-static-top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="./index.html">Make My Choice!</a>
+			</div>
+			<nav class="collapse navbar-collapse navbar-top navbar-right" role="navigation">
+				<ul class="nav navbar-nav">
+					<li><a href="./index.html"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+					<li><a href="./present.html"><span class="glyphicon glyphicon-gift"></span>Present</a></li>
+					<li><a href="./item.html"><span class="glyphicon glyphicon-cutlery"></span>Item</a></li>
+					<li><a href="./photo.html"><span class="glyphicon glyphicon-picture"></span>Photo</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="content-photo-detail" class="container">
+		<h1>お昼寝タイム</h1>
+		<div class="row">
+			<div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+				<img src="img/image-photo-detail.jpg" class="img-responsive" alt="" />
+			</div>
+			<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+				<p class="remain">
+					キャンペーン終了まで<br />
+					<span id="rmn_month"></span>
+				</p>
+				<p class="price">キャンペーン価格：108円</p>
+				<button type="button" class="btn btn-success">
+					<span class="glyphicon glyphicon-shopping-cart"></span> カートに入れる
+				</button>
+				<dl class="dl-share dl-horizontal">
+					<dt>Share</dt>
+					<dd><img src="img/icon-twitter.png" width="24" height="24" alt="Twitter" />
+					<img src="img/icon-facebook.png" width="24" height="24" alt="Facebook" />
+					<img src="img/icon-google-plus.png" width="24" height="24" alt="Google Plus" />
+					<img src="img/icon-pinterest.png" width="24" height="24" alt="Pinterest" />
+					<img src="img/icon-flickr.png" width="24" height="24" alt="Flickr" /></dd>
+				</dl>
+				<dl class="dl-rate dl-horizontal">
+					<dt>Rate</dt>
+					<dd id="rate"></dd>
+				</dl>
+				<dl class="dl-downloads dl-horizontal">
+					<dt>Downloads</dt>
+					<dd>100回</dd>
+				</dl>
+				<dl class="dl-views dl-horizontal">
+					<dt>Views</dt>
+					<dd>500回</dd>
+				</dl>
+			</div>
+		</div>
+		<p class="author">撮影者：HIROC</p>
+		<p class="date">撮影年月日：2011年7月4日</p>
+		<p class="place">撮影場所：がうがうタウン</p>
+		<p class="pixel">画素数：横 1000ピクセル × 縦 667ピクセル <span class="label label-default">JPG</span></p>
+		<p class="caption">生後3ヶ月目のちょいす。別名、三等身の綿ちょいす。</p>
+		<div class="alert alert-danger"><a href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> 利用可能な用途と禁止事項</a></div>
+	</div>
+	<hr />
+	<footer>
+		<div class="container">
+			<small>このWebサイトは書籍用のサンプルです。掲載されている内容は架空のものですのでご注意ください。</small>
+			<p>Copyright &copy; 2015 Hope Collective Inc. All Rights Reserved.</p>
+		</div>
+	</footer>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.plugin.min.js"></script>
+	<script src="js/jquery.countdown.js"></script>
+	<script src="js/jquery.countdown-ja.js"></script>
+	<script src="js/jquery.raty.js"></script>
+	<script>
+	<!--
+		$(function() {
+			// jquery.countdown.js
+			var cntdown = new Date();
+				cntdown.setDate(cntdown.getDate() + 10);
+			$('#rmn_month').countdown({
+				until  : cntdown,
+				format : "HMS",
+				layout : '<span class="num">{hn}</span> {hl} <span class="num">{mn}</span> {ml} <span class="num">{sn}</span> {sl}'
+			});
+
+			// jquery.raty.js
+			$("#rate").raty({ path: 'img/raty' });
+		});
+	// -->
+	</script>
+
+</body>
+</html>

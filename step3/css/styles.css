@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/*//////////////////////////////////////////////////////////////////////////////
+
+styles.css
+
+--------------------------------------------------------------------------------
+
+ 000. common
+ 001. content-profile
+ 002. content-present
+ 003. content-item
+
+//////////////////////////////////////////////////////////////////////////////*/
+
+/* 000. common
+ * サイトで共通のスタイルを定義します
+ * ========================================================================== */
+body {
+	color            : #2d2d2d;
+	font-family      : 'メイリオ', Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'ＭＳ Ｐゴシック', sans-serif;
+	background-color : #fffeea;
+	}
+
+/* ナビゲーションバーのカスタマイズ */
+.navbar-inverse {
+	padding-top    : 15px;
+	padding-bottom : 15px;
+	border-color   : #2d2d2d;
+	background     : #2d2d2d;
+	}
+	.navbar-inverse .navbar-toggle {
+		border-color : #444444;
+		}
+	.navbar-inverse .navbar-brand {
+		color       : #999999;
+		font-family : "Dosis", sans-serif;
+		font-size   : 24px;
+		font-weight : 700;
+		}
+	.navbar-inverse .navbar-brand:hover {
+		color : #ffffff;
+		}
+
+	.navbar-inverse .navbar-nav {
+		font-family : "Dosis", sans-serif;
+		font-size   : 16px;
+		font-weight : 700;
+		}
+		.navbar-inverse .navbar-nav > li > a {
+			color                 : #999999;
+			-webkit-border-radius : 8px;
+			-moz-border-radius    : 8px;
+			border-radius         : 8px;
+			}
+			.navbar-inverse .navbar-nav > li > a .glyphicon {
+				margin-right : 4px;
+				}
+		.navbar-inverse .navbar-nav > li > a:hover {
+			color : #ffffff;
+			}
+		.navbar-inverse .navbar-nav > .active > a {
+			color            : #ffffff;
+			background-color : #ffb423;
+			}
+		.navbar-inverse .navbar-nav > .active > a:hover {
+			color            : #ffffff;
+			background-color : #000000;
+			}
+
+/* 見出しのスタイル */
+h1, h2, h3 {
+	font-family : "Dosis",'メイリオ', Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'ＭＳ Ｐゴシック', sans-serif;
+	font-weight : 700;
+	}
+
+/* 001. content-profile
+ * Profileページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-profile {}
+
+	#btn-social {
+		margin-top : 10px;
+		}
+
+	#section-data {}
+		#section-data ul {
+			background : #f2f0d1;
+			padding    : 20px;
+			-webkit-border-radius : 5px;
+			-moz-border-radius    : 5px;
+			border-radius         : 5px;
+			}
+			#section-data ul li {
+				margin-top : 10px;
+				}
+			#section-data ul li:first-child {
+				margin-top : 0;
+				}
+				#section-data ul li p {
+					margin : 0;
+					}
+
+	#section-history {}
+		#section-history .table-striped {
+			background : #fffeea;
+			}
+			#section-history .table > thead > tr > th,
+			#section-history .table > tbody > tr > th,
+			#section-history .table > tfoot > tr > th,
+			#section-history .table > thead > tr > td,
+			#section-history .table > tbody > tr > td,
+			#section-history .table > tfoot > tr > td {
+				border-top : 1px solid #e0dfc3;
+				}
+			#section-history .table-striped > tbody > tr:nth-child(odd) > td,
+			#section-history .table-striped > tbody > tr:nth-child(odd) > th {
+					background-color : #f2f0d1;
+				}
+
+/* 002. #content-present
+ * Presentページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-present {}
+
+/* 003. item
+ * Itemページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-item {}
+	#item-tab {
+		margin-top : 20px;
+		}
+		#item-tab > li > a {
+			color : #333333;
+		}
+		#item-tab > li.active > a,
+		#item-tab > li.active > a:hover,
+		#item-tab > li.active > a:focus {
+			background-color : #fffeea;
+			}
+		#item-tab > li > a:hover {
+			background-color : #f2f0d1;
+			}
+@media (min-width: 768px) {
+		#item-tab.nav-justified > .active > a,
+		#item-tab.nav-justified > .active > a:hover,
+		#item-tab.nav-justified > .active > a:focus {
+			border-bottom-color : #fffeea;
+			}
+}
+		#content-item .nav .open > a,
+		#content-item .nav .open > a:hover,
+		#content-item .nav .open > a:focus {
+			border-color     : transparent;
+			background-color : #f2f0d1;
+			}
+
+	#item-tab-content {}
+
+		#tab-content-about {}
+			#item-about-row {
+				margin-top : 20px;
+				}
+			#item-about-accordion {
+				margin-top : 20px;
+				}
+				#item-about-accordion .panel-heading {
+					background : #2d2d2d;
+					}
+					#item-about-accordion .panel-heading .panel-title {
+						font-weight : normal;
+						}
+						#item-about-accordion .panel-heading .panel-title a {
+							color : #999999;
+							}
+						#item-about-accordion .panel-heading .panel-title a:hover {
+							color : #ffffff;
+							}
+
+		#tab-content-spec {}
+			#tab-content-spec .alert {
+				margin-top : 20px;
+				}
+			#tab-content-spec .table {
+				margin-top : 20px;
+				background : #ffffff;
+				}
+				#spec .table th {
+					color      : #ffffff;
+					background : #2d2d2d;
+					}
+
+		#tab-content-spec {}
+			#tab-content-gallery1 .row + .row,
+			#tab-content-gallery2 .row + .row {
+				margin-top : 20px;
+				}
+				#tab-content-gallery1 a,
+				#tab-content-gallery2 a {
+					display : block;
+					}

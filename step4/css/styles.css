@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+/*//////////////////////////////////////////////////////////////////////////////
+
+styles.css
+
+--------------------------------------------------------------------------------
+
+ 000. common
+ 001. content-profile
+ 002. content-present
+ 003. content-item
+ 004. content-photo
+ 005. content-photo-detail
+
+//////////////////////////////////////////////////////////////////////////////*/
+
+/* 000. common
+ * サイトで共通のスタイルを定義します
+ * ========================================================================== */
+body {
+	height           : 100% !important;
+	color            : #2d2d2d;
+	font-family      : 'メイリオ', Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'ＭＳ Ｐゴシック', sans-serif;
+	background-color : #fffeea;
+	}
+
+/* ナビゲーションバーのカスタマイズ */
+.navbar-inverse {
+	padding-top    : 15px;
+	padding-bottom : 15px;
+	border-color   : #2d2d2d;
+	background     : #2d2d2d;
+	}
+	.navbar-inverse .navbar-toggle {
+		border-color : #444444;
+		}
+	.navbar-inverse .navbar-brand {
+		color       : #999999;
+		font-family : "Dosis", sans-serif;
+		font-size   : 24px;
+		font-weight : 700;
+		}
+	.navbar-inverse .navbar-brand:hover {
+		color : #ffffff;
+		}
+
+	.navbar-inverse .navbar-nav {
+		font-family : "Dosis", sans-serif;
+		font-size   : 16px;
+		font-weight : 700;
+		}
+		.navbar-inverse .navbar-nav > li > a {
+			color                 : #999999;
+			-webkit-border-radius : 8px;
+			-moz-border-radius    : 8px;
+			border-radius         : 8px;
+			}
+			.navbar-inverse .navbar-nav > li > a .glyphicon {
+				margin-right : 4px;
+				}
+		.navbar-inverse .navbar-nav > li > a:hover {
+			color : #ffffff;
+			}
+		.navbar-inverse .navbar-nav > .active > a {
+			color            : #ffffff;
+			background-color : #ffb423;
+			}
+		.navbar-inverse .navbar-nav > .active > a:hover {
+			color            : #ffffff;
+			background-color : #000000;
+			}
+
+/* 見出しのスタイル */
+h1, h2, h3 {
+	font-family : "Dosis",'メイリオ', Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", 'ＭＳ Ｐゴシック', sans-serif;
+	font-weight : 700;
+	}
+
+/* 001. content-profile
+ * Profileページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-profile {}
+
+	#btn-social {
+		margin-top : 10px;
+		}
+
+	#section-data {}
+		#section-data ul {
+			background : #f2f0d1;
+			padding    : 20px;
+			-webkit-border-radius : 5px;
+			-moz-border-radius    : 5px;
+			border-radius         : 5px;
+			}
+			#section-data ul li {
+				margin-top : 10px;
+				}
+			#section-data ul li:first-child {
+				margin-top : 0;
+				}
+				#section-data ul li p {
+					margin : 0;
+					}
+
+	#section-history {}
+		#section-history .table-striped {
+			background : #fffeea;
+			}
+			#section-history .table > thead > tr > th,
+			#section-history .table > tbody > tr > th,
+			#section-history .table > tfoot > tr > th,
+			#section-history .table > thead > tr > td,
+			#section-history .table > tbody > tr > td,
+			#section-history .table > tfoot > tr > td {
+				border-top : 1px solid #e0dfc3;
+				}
+			#section-history .table-striped > tbody > tr:nth-child(odd) > td,
+			#section-history .table-striped > tbody > tr:nth-child(odd) > th {
+					background-color : #f2f0d1;
+				}
+
+/* 002. #content-present
+ * Presentページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-present {}
+
+/* 003. item
+ * Itemページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-item {}
+	#item-tab {
+		margin-top : 20px;
+		}
+		#item-tab > li > a {
+			color : #333333;
+		}
+		#item-tab > li.active > a,
+		#item-tab > li.active > a:hover,
+		#item-tab > li.active > a:focus {
+			background-color : #fffeea;
+			}
+		#item-tab > li > a:hover {
+			background-color : #f2f0d1;
+			}
+@media (min-width: 768px) {
+		#item-tab.nav-justified > .active > a,
+		#item-tab.nav-justified > .active > a:hover,
+		#item-tab.nav-justified > .active > a:focus {
+			border-bottom-color : #fffeea;
+			}
+}
+		#content-item .nav .open > a,
+		#content-item .nav .open > a:hover,
+		#content-item .nav .open > a:focus {
+			border-color     : transparent;
+			background-color : #f2f0d1;
+			}
+
+	#item-tab-content {}
+
+		#tab-content-about {}
+			#item-about-row {
+				margin-top : 20px;
+				}
+			#item-about-accordion {
+				margin-top : 20px;
+				}
+				#item-about-accordion .panel-heading {
+					background : #2d2d2d;
+					}
+					#item-about-accordion .panel-heading .panel-title {
+						font-weight : normal;
+						}
+						#item-about-accordion .panel-heading .panel-title a {
+							color : #999999;
+							}
+						#item-about-accordion .panel-heading .panel-title a:hover {
+							color : #ffffff;
+							}
+
+		#tab-content-spec {}
+			#tab-content-spec .alert {
+				margin-top : 20px;
+				}
+			#tab-content-spec .table {
+				margin-top : 20px;
+				background : #ffffff;
+				}
+				#spec .table th {
+					color      : #ffffff;
+					background : #2d2d2d;
+					}
+
+		#tab-content-spec {}
+			#tab-content-gallery1 .row + .row,
+			#tab-content-gallery2 .row + .row {
+				margin-top : 20px;
+				}
+				#tab-content-gallery1 a,
+				#tab-content-gallery2 a {
+					display : block;
+					}
+
+/* 004. content-photo
+ * Photoページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-photo {}
+	#content-photo .bx-wrapper {
+		margin-bottom : 0;
+		}
+		#content-photo .bx-wrapper .bx-viewport {
+			-webkit-box-sizing : content-box;
+			-moz-box-sizing    : content-box;
+			box-sizing         : content-box;
+			}
+
+	#news-ticker {
+		position     : relative;
+		margin-top   : 20px;
+		padding-left : 10px;
+		height       : 40px;
+		border       : 1px #eeeeee solid;
+		line-height  : 40px;
+		background   : #ffffff;
+		overflow     : hidden;
+		-webkit-border-radius : 5px;
+		-moz-border-radius    : 5px;
+		border-radius         : 5px;
+		}
+		#news-ticker .news_ticker {
+			height      : 40px;
+			padding     : 0;
+			border-left : none;
+			list-style  : none;
+			}
+			ul.news_ticker li {
+				margin-left  : 0;
+				padding-left : 0;
+				}
+		#news-ticker .news_btn_wrapper {
+			position : absolute;
+			right    : 0;
+			top      : 0;
+			}
+			#news-ticker .news_btn_prev,
+			#news-ticker .news_btn_next {
+				width       : 40px;
+				color       : #bbbbbb;
+				text-align  : center;
+				line-height : 40px;
+				background  : #eeeeee;
+				}
+			#news-ticker .news_btn_prev:hover,
+			#news-ticker .news_btn_next:hover{
+				cursor     : pointer;
+				background : #dddddd;
+				}
+
+	#photos {
+		width  : 100%;
+		margin : 20px auto 0 auto;
+		}
+		#photos .item {
+			display : block;
+			float   : left;
+			width   : 285px;
+			color   : #333333;
+			}
+		#photos .item.half {
+			width   : 285px;
+			}
+			@media (min-width: 617px) {
+					#photos .item.half {
+						width   : 570px;
+						}
+			}
+
+		#photos .item:hover {
+			color           : #333333;
+			text-decoration : none;
+			}
+			#photos .item .inner {
+				padding : 5px;
+				}
+				#photos .item .item-inner {
+					padding : 9px;
+					border  : 1px #eeeeee solid;
+					}
+					#photos .item .title {
+						margin-top  : 10px;
+						font-size   : 16px;
+						font-weight : bold;
+						}
+					#photos .item .caption {
+						margin : 0;
+						}
+
+/* 005. content-photo-detail
+ * Photo詳細ページ固有のスタイルを定義します
+ * ========================================================================== */
+#content-photo-detail {}
+	#content-photo-detail .remain {
+		margin-top : 20px;
+		font-size  : 16px;
+		}
+		#content-photo-detail .remain .num {
+			font-size   : 20px;
+			font-weight : bold;
+			}
+	#content-photo-detail .price {
+		margin-top : 20px;
+		}
+	#content-photo-detail .btn {
+		margin-top : 0;
+		}
+	#content-photo-detail dl {
+		margin-bottom : 10px;
+		}
+	#content-photo-detail .btn + dl {
+		margin-top : 40px;
+		}
+		#content-photo-detail dl dt {
+			width      : 120px;
+			text-align : left;
+			}
+		#content-photo-detail dl dd {
+			margin-left : 0;
+			}
+
+	#content-photo-detail .author {
+		margin-top : 20px;
+		}
+
+	#content-photo-detail .caption {
+		margin-top : 30px;
+		}
+
+	#content-photo-detail .alert {
+		margin-top : 20px;
+		text-align : center;
+		}
+		#content-photo-detail .alert a {
+			color : #ec2727;
+			}
+
+@media (min-width: 768px) {
+		#content-photo-detail .remain {
+			margin-top : 0;
+			font-size  : 16px;
+			}
+		#content-photo-detail dl {
+			margin-bottom : 20px;
+			}
+			#content-photo-detail dl dd {
+				margin-left : 120px;
+				}
+}
